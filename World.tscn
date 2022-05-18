@@ -1,0 +1,95 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://characters/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://env/ground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[sub_resource type="PhysicsMaterial" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 256, 224 )
+
+[node name="Grounds" type="Node" parent="."]
+
+[node name="ground" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 192, 544 )
+
+[node name="ground2" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 512, 544 )
+
+[node name="ground3" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 576, 544 )
+
+[node name="ground4" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 640, 544 )
+
+[node name="ground5" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 704, 544 )
+
+[node name="ground6" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 768, 544 )
+
+[node name="ground7" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 448, 544 )
+
+[node name="ground8" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 960, 544 )
+
+[node name="ground9" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 1024, 544 )
+
+[node name="ground10" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 64, 544 )
+
+[node name="ground11" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 0, 544 )
+
+[node name="ground12" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 256, 544 )
+
+[node name="ground13" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 320, 544 )
+
+[node name="ground14" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 896, 544 )
+
+[node name="ground15" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 832, 544 )
+
+[node name="ground16" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 128, 544 )
+
+[node name="ground17" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 384, 544 )
+
+[node name="ground18" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 1088, 544 )
+
+[node name="ground19" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( 1088, 448 )
+
+[node name="ground20" parent="Grounds" instance=ExtResource( 2 )]
+position = Vector2( -32, 448 )
+
+[node name="badguy" type="RigidBody2D" parent="."]
+position = Vector2( 416, 160 )
+mass = 65535.0
+physics_material_override = SubResource( 2 )
+gravity_scale = 29.03
+linear_velocity = Vector2( 1, 1 )
+applied_force = Vector2( 10, 10 )
+applied_torque = 5.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="badguy"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="badguy"]
+shape = SubResource( 1 )
